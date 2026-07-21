@@ -1,1 +1,220 @@
 # Spacekey
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SPACE KEY | للعقارات والتشطيبات</title>
+<meta name="description" content="SPACE KEY للعقارات والتشطيبات - بيع وشراء العقارات وتشطيبات متكاملة بأفضل الأسعار.">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Tahoma,sans-serif;
+}
+
+body{
+    background:#111;
+    color:#fff;
+}
+
+header{
+    background:#000;
+    padding:15px;
+    position:sticky;
+    top:0;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    color:#D4AF37;
+    font-size:28px;
+    font-weight:bold;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+    margin:0 10px;
+}
+
+.hero{
+    text-align:center;
+    padding:100px 20px;
+    background:#1b1b1b;
+}
+
+.hero h1{
+    color:#D4AF37;
+    margin-bottom:20px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:15px 30px;
+    background:#D4AF37;
+    color:#000;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+section{
+    padding:60px 20px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#222;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+}
+
+input,textarea{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:none;
+    border-radius:6px;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    background:#25D366;
+    color:#fff;
+    border:none;
+    border-radius:6px;
+    font-size:18px;
+    cursor:pointer;
+}
+
+footer{
+    background:#000;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container">
+<nav>
+<div class="logo">SPACE KEY</div>
+
+<div>
+<a href="#">الرئيسية</a>
+<a href="#services">الخدمات</a>
+<a href="#contact">تواصل</a>
+</div>
+
+</nav>
+</div>
+</header>
+
+<section class="hero">
+<h1>مفتاح مساحتك... من الطوب للتشطيب</h1>
+<p>بيع وشراء العقارات وتشطيبات متكاملة بأعلى جودة.</p>
+
+<a class="btn" href="#contact">اطلب معاينة مجانية</a>
+</section>
+
+<section id="services" class="container">
+
+<h2>خدماتنا</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>بيع وشراء العقارات</h3>
+<p>أفضل الوحدات السكنية.</p>
+</div>
+
+<div class="card">
+<h3>تشطيبات متكاملة</h3>
+<p>تشطيب فاخر بأعلى جودة.</p>
+</div>
+
+<div class="card">
+<h3>تصميم 3D</h3>
+<p>شاهد التصميم قبل التنفيذ.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact" class="container">
+
+<h2>اطلب معاينة مجانية</h2>
+
+<form id="form">
+
+<input type="text" id="name" placeholder="الاسم" required>
+
+<input type="tel" id="phone" placeholder="رقم الهاتف" required>
+
+<textarea id="details" placeholder="تفاصيل الطلب"></textarea>
+
+<button>إرسال عبر واتساب</button>
+
+</form>
+
+</section>
+
+<footer>
+
+<p>📞 01011904232</p>
+<p>📍 كفرة نصار - الجيزة</p>
+
+</footer>
+
+<script>
+document.getElementById("form").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+let name=document.getElementById("name").value;
+let phone=document.getElementById("phone").value;
+let details=document.getElementById("details").value;
+
+let msg=`السلام عليكم
+أرغب في حجز معاينة مجانية
+
+الاسم: ${name}
+الهاتف: ${phone}
+
+التفاصيل:
+${details}`;
+
+window.open("https://wa.me/201011904232?text="+encodeURIComponent(msg),"_blank");
+
+});
+</script>
+
+</body>
+</html>
