@@ -37,13 +37,14 @@ header{
     display:flex;
     justify-content:space-between;
     align-items:center;
+    direction:rtl;
 }
 
 /* اللوجو */
 .logo{
     display:flex;
     align-items:center;
-    gap:15px;
+    gap:10px;
 }
 
 .logo img{
@@ -64,7 +65,7 @@ nav{
     width:100%;
     display:flex;
     justify-content:center;
-    margin-top:-5px;
+    margin-top:15px;
 }
 
 nav ul{
